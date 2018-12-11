@@ -89,9 +89,11 @@ our website allows the user to add a post .
 
 3- Put in terminal : **npm install**.
 
-4- Then put in terminal : **npm run nodemon** to run the server. 
+4- Then put in terminal : **npm run dev** to run the server. 
 
 5- Open your browser and put in terminal: **localhost:9001**.
+
+
 
 
 #### Travis CI:

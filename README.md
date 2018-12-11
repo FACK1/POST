@@ -9,69 +9,41 @@ our website allows the user to add a post .
 ### Site design :
 
 ### Architecture :
-- Front-End :
+```
+- Public
+       |__html
+             |__login.html
+             |__signup.html
+       |__Js
+              |_ domLogin.js
+              |_domSingup.js
+              |_domPost.js
+              |_fetch.js
+       |__ css
+              |_ style.css
+              |_ resets.css
+- Src
+     |__ database
+              |_ db_build.sql
+              |_ db_bulid.js
+              |_ db_connection.js
+    |__ queries
+              |_postLogin.js
+              |_ getPost.js
+              |_postSignup.js
+              |_postPost.js
+    |__ server
+              |_ server.js
+              |_ router.js
+              |_ handlers.js
+    |__ test
+              |_ routes_test.js
+              |_ db_test.js
+- gitignore
+- config.env
+```
 
-  we create  public folder and put inside its folders like :
-   - css :
-   
-       style.css
-
-       resets.css
-  - js :
-  
-      domLogin.js
-
-      domSignup.js
-      
-      domPost.js
-
-      fetch.js
-   
-  - html:
-  
-    login.html
-   
-    signup.html
-  
-- Back-End:
-
-  we create src folder and put folders in its like :
-
-  - database :
-  
-      db_build.js
-
-      db_build.sql 
-
-      db_connection.js
-    
-  - queries :
-  
-      getPost.js
-      
-      postPost.js
-  
-      postLogin.js
-
-      postSignup.js
-      
-  - Server:
-
-    server.js
-
-    router.js
-   
-    handlers.js
-
-    
-
-   - Test :
-  
-      db_test.js
-      
-- package.json
-
-- Database schema:
+### Database schema:
 
 ![222](https://user-images.githubusercontent.com/37650536/49822335-6b9e3780-fd42-11e8-8554-256eefcc294f.png)
 

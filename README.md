@@ -75,8 +75,6 @@ In our app you can  add  your favourite post by putting the text of  its in the 
 
 
 
-- HTML structure :
-our website is a  page contains a title for website with background , then will find a box to enter the name for the movie  in the same line have a button to search for the movie and button to add movies  .
 
 
 

@@ -71,7 +71,8 @@ In our app you can  add  your favourite post by putting the text of  its in the 
  
 -  Database schema:
 
-![screenshot from 2018-12-11 20-31-58](https://user-images.githubusercontent.com/37650536/49821842-085fd580-fd41-11e8-96b0-eafc7bb6da1b.png)
+![222](https://user-images.githubusercontent.com/37650536/49822335-6b9e3780-fd42-11e8-8554-256eefcc294f.png)
+
 
 
 

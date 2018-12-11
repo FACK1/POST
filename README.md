@@ -83,7 +83,7 @@ our website allows the user to add a post .
 
  ### How to run our site on your machine?
 
-1- Clone this repo.
+1- Clone this repo (git@github.com:FACK1/POST.git)
 
 2- Open your command line.
 

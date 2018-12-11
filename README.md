@@ -3,9 +3,7 @@
 ### About:
 our website allows the user to add a post .
 ### User journey: 
-In our app you can  add  your favourite post by putting the text of  its in the place of input .
-
-As a user I want to add post , the user will the others posts .
+ - As a user I want to add post , the user will the others posts .
 ### Site Link in Heroku :
 [POST]() 
 ### Site design :

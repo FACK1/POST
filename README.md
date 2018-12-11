@@ -3,7 +3,7 @@
 ### About:
 our website allows the user to add a post .
 ### User journey: 
- - As a user I want to add post , the user will the others posts .
+ - As a user I want to add post , the user will see the posts of others  .
 ### Site Link in Heroku :
 [POST]() 
 ### Site design :

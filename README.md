@@ -23,7 +23,7 @@ In our app you can  add  your favourite post by putting the text of  its in the 
 
       domSignup.js
       
-      domPst.js
+      domPost.js
 
       fetch.js
    

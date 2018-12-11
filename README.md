@@ -68,8 +68,9 @@ our website allows the user to add a post .
    - Test :
   
       db_test.js
- 
--  Database schema:
+-package.json
+
+- Database schema:
 
 ![222](https://user-images.githubusercontent.com/37650536/49822335-6b9e3780-fd42-11e8-8554-256eefcc294f.png)
 

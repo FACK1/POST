@@ -69,7 +69,7 @@ our website allows the user to add a post .
   
       db_test.js
       
--package.json
+- package.json
 
 - Database schema:
 

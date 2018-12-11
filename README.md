@@ -19,7 +19,7 @@ In our app you can  add  your favourite post by putting the text of  its in the 
        resets.css
   - js :
   
-       domLgin.js
+      domLogin.js
 
       domSignup.js
       
@@ -47,7 +47,7 @@ In our app you can  add  your favourite post by putting the text of  its in the 
     
   - queries :
   
-      getMPost.js
+      getPost.js
       
       postPost.js
   
@@ -55,7 +55,7 @@ In our app you can  add  your favourite post by putting the text of  its in the 
 
       postSignup.js
       
-- Server:
+ - Server:
 
    server.js
 
@@ -95,7 +95,7 @@ our website is a  page contains a title for website with background , then will 
 
 #### Travis CI:
 
-[![Build Status](https://travis-ci.org/FACK1/safa-shaima.svg?branch=master)](https://travis-ci.org/FACK1/safa-shaima)
+[![Build Status]()
 ### Team Member:
 
 - [Shaima' Azmi](https://github.com/shaima96)

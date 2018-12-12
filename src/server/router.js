@@ -18,6 +18,9 @@ const router = (request, response)=> {
       else if (request.url ==='/postLogin') {
               handlers.postLoginHandler(request,response)
         }
+        else if (request.url ==='/getLogout') {
+                handlers.getLogoutHandler(request,response)
+          }
     else {
           handlers.pageNotFoundHandler(request,response)
     }

@@ -8,7 +8,7 @@ const router = (request, response)=> {
             handlers.publicHandler(request,response)
     }
     else if (request.url==='/getPost') {
-          handlers.getPostHandler(request,response)
+          handlers.getPostHandler(response)
     }
     else if (request.url === '/postPost') {
           handlers.postPostHandler(request,response)

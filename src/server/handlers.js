@@ -90,16 +90,37 @@ const getPostHandler = response => {
 };
 //------------------------------------------------
 const postPostHandler = (request, response) => {
+  validater(request.headers.cookie,(err,result)=>{
 
+         if(err)
+         {
+           response.writeHead(302,{'location': '/'})
+         }
+         else{
+    console.log(result);
     let data = '';
     request.on('data', chunk => {
         data += chunk;
     });
 
-    request.on('end', (err) => {
-      const {text} = queryString.parse(data);
+       request.on('end', (err) => {
+        const {text_post} = queryString.parse(data);
+        console.log(text_post);
+        postPost(text_post,result.name, (err, result) => {
+          if (err) {
+            console.log(err);
+            response.statusCode = 500;
+            response.end('Error registering')
+            return
+          }
+          response.statusCode = 200;
+          response.writeHead(302,{'location': '/'})
+          response.end('successfully post !')
+        })
       });
+    }
 
+});
 }
 
 //------------------------------------------------

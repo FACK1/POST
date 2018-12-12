@@ -12,9 +12,9 @@ CREATE TABLE users(
 CREATE TABLE posts(
   id SERIAL PRIMARY KEY,
   text_post TEXT,
-  time_post TIMESTAMP,
-   user_id INTEGER,
- FOREIGN KEY (user_id) REFERENCES users(id)
+  time_post TIMESTAMP DEFAULT CURRENT_TIME,
+   user_name VARCHAR (255),
+ FOREIGN KEY (user_name) REFERENCES users(user_name)
 );
 
 COMMIT;

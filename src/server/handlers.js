@@ -7,19 +7,48 @@ const postLogin=require('../queries/postLogin.js');
 const postPost = require('../queries/postPost');
 const postSignUp = require('../queries/postSignup');
 const bcrypt = require('bcryptjs');
+const cookie = require('cookie');
+const jwt = require('jsonwebtoken');
+require('env2')('config.env')
+const { secret } = process.env
+const validater=require('./validater');
+
+
 
 //------------------------------------------------
 const  homeHandler=(request,response)=>{
-  const htmlPath =  path.join(__dirname, '../../public/html/login.html')
-  fs.readFile(htmlPath, (error, html) => {
-      if(error){
-        console.log(error);
-         response.writeHead(500, {'content-Type': 'text/html'})
-         response.end('<h1> Server error! sorry</h1>')
-      }
-      response.writeHead(200, {'Content-Type': 'text/html'})
-      response.end(html)
-  });
+  validater(request.headers.cookie,(err,result)=>{
+    if(err){
+      const htmlPath =  path.join(__dirname, '../../public/html/login.html')
+      fs.readFile(htmlPath, (error, html) => {
+          if(error){
+            console.log(error);
+            response.writeHead(500, {'content-Type': 'text/html'})
+            response.end('<h1> Server error! sorry</h1>')
+             return;
+          }
+          response.writeHead(200, {'Content-Type': 'text/html'})
+          response.end(html)
+      });
+    }
+    else{
+      const postPath =  path.join(__dirname, '../../public/html/post.html')
+      fs.readFile(postPath, (error, html) => {
+          if(error){
+            console.log(error);
+            response.writeHead(500, {'content-Type': 'text/html'})
+            response.end('<h1> Server error! sorry</h1>')
+             return;
+          }
+          response.writeHead(200, {'Content-Type': 'text/html'})
+          response.end(html)
+      });
+
+      console.log("zaaabdet");
+
+    }
+  })
+
 }
 //------------------------------------------------
 const  publicHandler=(request,response)=>{
@@ -69,13 +98,51 @@ const postPostHandler = (request, response) => {
 
     request.on('end', (err) => {
       const {text} = queryString.parse(data);
-            });
+      });
 
 }
 
 //------------------------------------------------
-const postLoginHandler = (request, response) => {
+const postLoginHandler = (req, res) => {
+  var body = '';
+  req.on('data', (data) => {
+    body += data;
+  });
+  req.on('end', () => {
+  const { name ,pass } = queryString.parse(body)
+ console.log(name,pass,"here")
+  postLogin(name, (err, hashPass) => {
+      if (err) {
+        console.log(err);
+        res.statusCode = 500;
+        res.end('Error logging in')
+        return
+      }
+     console.log( hashPass);
+      bcrypt.compare(pass, hashPass[0].password, function(err, result) {
+        if (err){
+          res.statusCode = 403;
+          res.end('Error Logging In!');
 
+        }
+        else{
+          if(result){
+            console.log("done")
+             res.statusCode = 200;
+             res.writeHead(302,{'Set-Cookie': 'name='+jwt.sign({ name: name }, secret),
+             'location': '/'})
+             res.end('Success Logging In!');
+          }
+          else{
+            console.log("not done")
+            res.writeHead(302,{'location': '/postPost'})
+            res.end('Not Success Logging In!');
+          }
+        }
+      });
+
+    })
+  })
 }
 
 
@@ -105,19 +172,21 @@ const postSignUpHandler = (request, res) => {
     });
     console.log(name, email, psw);
 });
-
-    // postSignUp({name,email,psw}, (err, passwordInDatabase) => {
-    //   if (err) {
-    //     res.statusCode = 500;
-    //     res.end('Error logging in')
-    //     return
-    //   }
-    //
-    // })
 });
 }
 
+//------------------------------------------------
 
+const getLogoutHandler=(request ,response)=>{
+
+    console.log("done")
+     response.statusCode = 200;
+     response.writeHead(302,{'Set-Cookie': 'name=false; Max-Age=0;',
+     'location': '/'});
+     response.end('Success Logging out!');
+
+
+}
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
   response.writeHead(404, {'content-Type': 'text/html'})
@@ -131,5 +200,6 @@ module.exports={
   postPostHandler,
   postLoginHandler,
   postSignUpHandler,
-  pageNotFoundHandler
+  pageNotFoundHandler,
+  getLogoutHandler
 };

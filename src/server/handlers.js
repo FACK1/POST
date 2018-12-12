@@ -22,7 +22,7 @@ const  homeHandler=(request,response)=>{
 }
 //------------------------------------------------
 const  publicHandler=(request,response)=>{
-  const filePath =  path.join(__dirname, '..', request.url);
+  const filePath =  path.join(__dirname, '..', '..',request.url);
   const extention = request.url.split('.')[1];
   const contentTypeMapping = {
      'js': 'application/js',
@@ -40,6 +40,8 @@ const  publicHandler=(request,response)=>{
 
  fs.readFile(filePath, (error, file) => {
      if(error){
+       console.log(error);
+
          response.writeHeader(500, {'content-Type': 'text/html'});
          response.end('<h1> Server error! sorry</h1>');
      }

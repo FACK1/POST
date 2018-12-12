@@ -6,6 +6,7 @@ const getPost=require('../queries/getPost.js');
 const postLogin=require('../queries/postLogin.js');
 const postPost = require('../queries/postPost');
 const postSignUp = require('../queries/postSignup');
+const bcrypt = require('bcryptjs');
 
 //------------------------------------------------
 const  homeHandler=(request,response)=>{
@@ -80,18 +81,42 @@ const postLoginHandler = (request, response) => {
 
 //------------------------------------------------
 
-const postSignUpHandler = (request, response) => {
+const postSignUpHandler = (request, res) => {
     let data = '';
     request.on('data', chunk => {
         data += chunk;
     });
 
     request.on('end', (err) => {
-      const {username, email, password} = queryString.parse(data);
+      const {name, email, psw} = queryString.parse(data);
+      bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(psw, salt, function(err, hash) {
+    postSignUp(name,email, hash, (err, result) => {
+        if (err) {
+          console.log(err);
+          res.statusCode = 500;
+          res.end('Error registering')
+          return
+        }
+        res.statusCode = 200;
+        res.writeHead(302,{'location': '/'})
+        res.end('successfully registered!')
+      })
+    });
+    console.log(name, email, psw);
+});
 
-    })
-
+    // postSignUp({name,email,psw}, (err, passwordInDatabase) => {
+    //   if (err) {
+    //     res.statusCode = 500;
+    //     res.end('Error logging in')
+    //     return
+    //   }
+    //
+    // })
+});
 }
+
 
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{

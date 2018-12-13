@@ -8,7 +8,7 @@
     "dev": "nodemon ./src/server/server.js",
     "lint": "./node_modules/.bin/eslint ./src/server/**/*.js",
     "lint-fix": "./node_modules/.bin/eslint --fix ./src/**/*.js",
-    "start":" node./src/server/server.js"
+    "start":" node ./src/server/server.js"
   },
   "repository": {
     "type": "git",

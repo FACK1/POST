@@ -1,12 +1,12 @@
-<<<<<<< HEAD
+
 # POST
 
 ### About:
 our website allows the user to add a post .
-### User journey: 
+### User journey:
  - As a user I want to add post , the user will see the posts of others  .
 ### Site Link in Heroku :
-[POST]() 
+[POST]()
 ### Site design :
 
 ### Architecture :
@@ -61,7 +61,7 @@ our website allows the user to add a post .
 
 3- Put in terminal : **npm install**.
 
-4- Then put in terminal : **npm run dev** to run the server. 
+4- Then put in terminal : **npm run dev** to run the server.
 
 5- Open your browser and put in terminal: **localhost:9001**.
 
@@ -72,8 +72,3 @@ our website allows the user to add a post .
 - [Shaima' Azmi](https://github.com/shaima96)
 - [Safa Amro](https://github.com/safaaamro)
 - [Razan Tayyem](https://github.com/RazanTayyem)
-
-
-=======
->>>>>>> 7035c8194cfd4df23dc350ac81871132f517cb29
-

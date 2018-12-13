@@ -45,8 +45,7 @@ our website allows the user to add a post .
 
 ### Database schema:
 
-![222](https://user-images.githubusercontent.com/37650536/49822335-6b9e3780-fd42-11e8-8554-256eefcc294f.png)
-
+![screenshot from 2018-12-13 08-51-04](https://user-images.githubusercontent.com/37650536/49920849-4d832500-fe71-11e8-93d3-287e2e472e70.png)
 
 
 
@@ -67,10 +66,6 @@ our website allows the user to add a post .
 
 
 
-
-#### Travis CI:
-
-[![Build Status]()
 ### Team Member:
 
 - [Shaima' Azmi](https://github.com/shaima96)

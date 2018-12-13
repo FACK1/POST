@@ -13,32 +13,34 @@ our website allows the user to add a post .
 ```
 - Public
        |__html
-             |__login.html
-             |__signup.html
+             |_ login.html
+             |_ signup.html
+             |_ post.html
        |__Js
-              |_ domLogin.js
-              |_domSingup.js
+            
               |_domPost.js
-              |_fetch.js
+             
        |__ css
               |_ style.css
               |_ resets.css
+              |_ post.css
+              |_ signup.css
 - Src
      |__ database
               |_ db_build.sql
               |_ db_bulid.js
               |_ db_connection.js
     |__ queries
-              |_postLogin.js
+              |_ postLogin.js
               |_ getPost.js
-              |_postSignup.js
-              |_postPost.js
+              |_ postSignup.js
+              |_ postPost.js
     |__ server
               |_ server.js
               |_ router.js
               |_ handlers.js
+              |_ validater.js
     |__ test
-              |_ routes_test.js
               |_ db_test.js
 - gitignore
 - config.env

@@ -149,7 +149,6 @@ const postPostHandler = (request, response) => {
 });
 }
 
-//------------------------------------------------
 const postLoginHandler = (req, res) => {
   var body = '';
   req.on('data', (data) => {
@@ -159,7 +158,7 @@ const postLoginHandler = (req, res) => {
   const { name ,pass } = queryString.parse(body)
  console.log(name,pass,"here")
   postLogin(name, (err, hashPass) => {
-      if (err) {
+      if (err || hashPass.length==0) {
         console.log(err);
         res.statusCode = 500;
         res.end('Error logging in')

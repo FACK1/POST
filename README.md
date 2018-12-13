@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # POST
 
 ### About:
@@ -73,4 +74,6 @@ our website allows the user to add a post .
 - [Razan Tayyem](https://github.com/RazanTayyem)
 
 
+=======
+>>>>>>> 7035c8194cfd4df23dc350ac81871132f517cb29
 

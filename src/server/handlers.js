@@ -80,39 +80,40 @@ const  publicHandler=(request,response)=>{
  })
 }
 //------------------------------------------------
-// const getPostHandler = (request,response)=> {
-//   console.log("headerS",request.headers)
-// validater(request.headers.cookie,(err,result)=>{
-//   if(err)
-//   {
-//     console.log(err)
-//     response.writeHead(302,{'location': '/'})
-//     response.end(JSON.stringify({message:"falid"}));
-//   }else {
-//     console.log("b")
+const getPostHandler = (request,response)=> {
+  console.log("headerS",request.headers)
+validater(request.headers.cookie,(err,result)=>{
+  if(err)
+  {
+    console.log(err)
+    response.writeHead(302,{'location': '/'})
+    response.end(JSON.stringify({message:"falid"}));
+  }else {
+    console.log("b")
+
+    getPost((err, result) => {
+      console.log("c")
+        if (err)
+        return serverError(err, response);
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.end(JSON.stringify(result));
+      });
+
+  }
+});
+}
+
+
 //
-//     getPost((err, result) => {
-//       console.log("c")
-//         if (err)
-//         return serverError(err, response);
-//         response.writeHead(200, { 'Content-Type': 'application/json' });
-//         response.end(JSON.stringify(result));
-//       });
-//
-//   }
-// });
-// }
-
-
-
-const getPostHandler = response => {
-  getPost((err, result) => {
-    if (err)
-    return serverError(err, response);
-    response.writeHead(200, { 'Content-Type': 'application/json' });
-    response.end(JSON.stringify(result));
-  });
-};
+// const getPostHandler = (request,response) => {
+//   console.log("headers",request.headers)
+//   getPost((err, result) => {
+//     if (err)
+//     return serverError(err, response);
+//     response.writeHead(200, { 'Content-Type': 'application/json' });
+//     response.end(JSON.stringify(result));
+//   });
+// };
 //------------------------------------------------
 const postPostHandler = (request, response) => {
   validater(request.headers.cookie,(err,result)=>{

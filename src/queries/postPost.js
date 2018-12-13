@@ -7,11 +7,9 @@ const postPost = (text_post,user_name, cb) => {
       if (err) {
         cb(err);
       } else {
-        cb(null, JSON.stringify({ success: 'This was a success' }));
+      cb(null, JSON.stringify({ success: 'This was a success' }));
       }
     }
   );
 };
-
-
 module.exports= postPost;

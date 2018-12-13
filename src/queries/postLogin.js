@@ -9,7 +9,6 @@ const postLogin = (name, cb) => {
         cb(err);
       } else {
         cb(null,data.rows);
-
       }
     });
 };

@@ -12,12 +12,12 @@ our website allows the user to add a post .
 ### Architecture :
 ```
 - Public
-       |__html
+       |__ html
              |_ login.html
              |_ signup.html
              |_ post.html
              
-       |__Js
+       |__ Js
               |_domPost.js
              
        |__ css

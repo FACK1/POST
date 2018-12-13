@@ -16,8 +16,8 @@ our website allows the user to add a post .
              |_ login.html
              |_ signup.html
              |_ post.html
+             
        |__Js
-            
               |_domPost.js
              
        |__ css

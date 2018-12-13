@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    hello world
-      <a href='/getLogout' method="get" style="color: blue; font-size: 30px; float: right; margin-right: 10px;"> LOGOUT! </a>
-  </body>
+<html lang="en">
+<head>
+	<title> Post</title>
+  <link rel="stylesheet" href="/public/css/resets.css" type="text/css">
+	<link rel="stylesheet" href="/public/css/style.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+<body class = "container-flex">
+  <div class="container">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <center> <b id="login-name">post </b> </center>
+
+
+  	<div class="row">
+  <div id="login">
+  <form action="/postPost" method="post">
+    <textarea placeholder="What are you doing right now?"  name="text_post"></textarea>
+<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+<a href='/getLogout' method="get" style="color: blue; font-size: 30px; float: right; margin-right: 10px;"> LOGOUT! </a>
+</form>
+<section>
+<div id = "cont"> </div>
+
+</section>
+
+    </div>
+  	</div>
+
+  </div>
+
+
+
+
+  <script src="public/js/domPost.js"></script>
+
+	</body>
 </html>

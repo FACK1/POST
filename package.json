@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/server/server.js"
+    "test": "tape ./src/test/test.js | tap-spec ",
+    "dev": "nodemon ./src/server/server.js",
+    "lint": "./node_modules/.bin/eslint ./src/server/**/*.js",
+    "lint-fix": "./node_modules/.bin/eslint --fix ./src/**/*.js",
+    "start":" node./src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,13 @@
     "pg": "^7.7.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.8"
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "nodemon": "^1.18.8",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }

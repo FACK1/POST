@@ -1,7 +1,7 @@
 const db_connection = require('../database/db_connection');
 
 const getPost = (cb) => {
-  db_connection.query('select * from  posts',
+  db_connection.query('select * from  posts where user_name=user_name',
 
     (err, data) => {
       if (err) {

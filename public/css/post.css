@@ -1,0 +1,149 @@
+body{
+	background-image:url(https://wallpapertag.com/wallpaper/full/c/a/a/157415-simplistic-wallpapers-1920x1080-lockscreen.jpg)
+}
+#login-name{
+font-size: 65px;
+font-family: arabic typesetting;
+color:white;
+
+}
+#login{
+background-color:rgba(13,13,13,0.2);
+min-height:500px;
+padding: 40px 80px 40px 80px;
+box-shadow: -10px -10px 9px #33cc33;
+
+}
+
+.user{
+font-size: 29px;
+font-family: arabic typesetting;
+color: white;
+}
+
+
+#text1{
+	border-radius: 0;
+	height: 40px;
+  width: 235px;
+}
+#text2{
+	border-radius: 0;
+	height: 40px;
+  width: 235px;
+}
+
+.btn{
+	width: 50%;
+	float: left;
+	height: 40px;
+	font-size: 18px;
+}
+.btn-success{
+margin-top: 20px;
+width: 117px;
+background-color: green;
+font-size: 30px;
+}
+
+.btn-rest{
+  margin-top: 20px;
+  width: 117px;
+  background-color: red;
+  font-size: 30px;
+
+
+}
+@media screen and (min-width: 992px) {
+  .row{
+width: 50%;
+margin-left: 25%;;
+
+  }
+
+  #login-name{
+  font-size: 65px;
+  font-family: arabic typesetting;
+  color:white;
+
+  }
+  #login{
+  background-color:rgba(13,13,13,0.2);
+  min-height:500px;
+  padding: 40px 80px 40px 80px;
+  box-shadow: -10px -10px 9px #33cc33;
+
+  }
+  .user{
+  font-size: 29px;
+  font-family: arabic typesetting;
+  color: white;
+  }
+
+
+  #text1{
+  	border-radius: 0;
+  	height: 40px;
+    width: 300px;
+
+  }
+  #text2{
+  	border-radius: 0;
+    height: 40px;
+    width: 300px;
+  }
+
+  .btn{
+  	width: 50%;
+  	float: left;
+  	height: 40px;
+  	font-size: 18px;
+  }
+  .btn-success{
+  margin-top: 20px;
+  width: 150px;
+  background-color: green;
+  font-size: 30px;
+  }
+
+  .btn-rest{
+    margin-top: 20px;
+    width: 150px;
+    background-color: red;
+    font-size: 30px;
+
+
+  }
+
+  .form-group{
+margin-top: 8%;
+  margin-left: 20%;
+
+  }
+}
+.area{
+height: 100px;
+  width :100%;
+}
+.successgreen{
+  margin-top: 20px;
+  margin-left: 390px;
+  height: 40px;
+  width: 20%;
+  background-color: green;
+}
+.user_name{
+  width: 100px;
+}
+.postElement{
+background-color:rgba(13,13,13,0.2);
+
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  height: 80px;
+  font-size: 20px;
+  font-style: italic;
+  box-shadow: -10px -10px 9px #33cc33;
+
+}

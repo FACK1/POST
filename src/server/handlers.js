@@ -20,9 +20,8 @@ const htmlPath =  path.join(__dirname, '../../public/html/login.html')
 fs.readFile(htmlPath, (error, html) => {
 if(error){
 response.writeHead(500, {'content-Type': 'text/html'})
-response.end('
-<h1> Server error! sorry</h1>
-')
+response.end()
+//'<h1> Server error! sorry</h1>'
 return;
 }
 response.writeHead(200, {'Content-Type': 'text/html'})
@@ -30,13 +29,14 @@ response.end(html)
 });
 }
 else{
+  console.log("i am here")
 const postPath =  path.join(__dirname, '../../public/html/post.html')
 fs.readFile(postPath, (error, html) => {
 if(error){
 response.writeHead(500, {'content-Type': 'text/html'})
-response.end('
+response.end(`
 <h1> Server error! sorry</h1>
-')
+`)
 return;
 }
 response.writeHead(200, {'Content-Type': 'text/html'})
@@ -65,9 +65,9 @@ return;
 fs.readFile(filePath, (error, file) => {
 if(error){
 response.writeHeader(500, {'content-Type': 'text/html'});
-response.end('
+response.end(`
 <h1> Server error! sorry</h1>
-');
+`);
 }
 response.writeHead(200, {'content-Type': contentTypeMapping[extention]})
 response.end(file)
@@ -188,9 +188,9 @@ response.end('Success Logging out!');
 //------------------------------------------------
 const pageNotFoundHandler=(request,response)=>{
 response.writeHead(404, {'content-Type': 'text/html'})
-response.end('
+response.end(`
 <h1>Page Not Found</h1>
-')
+`)
 }
 module.exports={
 homeHandler,

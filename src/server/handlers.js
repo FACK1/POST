@@ -149,7 +149,6 @@ const postPostHandler = (request, response) => {
 });
 }
 
-//------------------------------------------------
 const postLoginHandler = (req, res) => {
   var body = '';
   req.on('data', (data) => {
